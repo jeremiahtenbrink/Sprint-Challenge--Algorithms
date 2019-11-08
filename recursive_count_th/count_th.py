@@ -5,6 +5,7 @@ Your function must utilize recursion. It cannot contain any loops.
 '''
 def count_th(word):
     
-    # TBC
-    
-    pass
+    index = word.find('th')
+    if index > -1:
+        return count_th(word[index + 2:]) + 1
+    return 0
